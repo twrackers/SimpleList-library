@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For List
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+ListItem  KEYWORD1
+List      KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setNext KEYWORD2
+getNext KEYWORD2
+getItem KEYWORD2
+add	    KEYWORD2
+rewind  KEYWORD2
+next    KEYWORD2
+hasNext KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
