@@ -5,6 +5,8 @@
 // Define object to hold list of powers of 2.
 List<unsigned int> powersOf2;
 
+unsigned long count = 0;
+
 void setup() {
   // Setup serial port for output.
   Serial.begin(115200);
@@ -22,6 +24,8 @@ void setup() {
 }
 
 void loop() {
+  // Increment line count.
+  Serial << ++count << ": ";
   // Rewind to the beginning of the list.
   powersOf2.rewind();
   // While there's a next entry in the list...
@@ -35,4 +39,5 @@ void loop() {
   // Output will be series of lines like:
   // 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384
   Serial << endl;
+  delay(100);
 }
