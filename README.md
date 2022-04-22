@@ -10,3 +10,9 @@ This class uses an `add` method to populate the list, and `rewind`, `hasNext`,  
 - The `rewind` method sets the current list position to the head, the beginning of the list.
 - The `hasNext` method returns `true` if there is a list item **after** the most recently accessed item.  If the most recent item is at the tail, then `hasNext` will return `false`.
 - The `next` method returns an object reference to the object **after** the most recently accessed item.  If the most recent item is at the tail, then `next` will return `NULL`.
+
+### Note ###
+
+On an Arduino processor, "dynamic" memory is not truly dynamic.  Memory can be allocated using the C++ `new` keyword, but `delete` does not free that memory.  This is especially an issue considering Arduino processors have a very limited of RAM available; the Uno has only 2K bytes and the Mega 2560 only 8K, for example.
+
+The expected usage of the `List` class is to create a linked list which is created once and then repeatedly read as the program loops.
