@@ -16,3 +16,8 @@ This class uses an `add` method to populate the list, and `rewind`, `hasNext`,  
 On an Arduino processor, "dynamic" memory is not truly dynamic.  Memory can be allocated using the C++ `new` keyword, but `delete` does not free that memory.  This is especially an issue considering Arduino processors have a very limited amount of RAM available; the Uno has only 2K bytes and the Mega 2560 only 8K, for example.
 
 The expected usage of the `List` class is to create a linked list which is created once and then repeatedly read as the program loops.
+
+### Example sketches ###
+
+- `ListExample` generates a linked list of the first 15 powers of 2 as `unsigned int` values, then repeatedly prints the list.
+- `ListStringExample` works like `ListExample` except it creates a list of [`String` objects](https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/) instead of `unsigned int` data.
