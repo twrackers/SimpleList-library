@@ -40,8 +40,8 @@ void loop() {
     Serial << *stringList.next();
   }
   // Done, write end of line.
-  // Output will be series of lines like:
-  // 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384
+  // Output will be series of numbered lines like:
+  // [1] [2] [4] [8] [16] [32] [64] [128] [256] [512] [1024] [2048] [4096] [8192] [16384]
   Serial << endl;
   delay(100);
 }
