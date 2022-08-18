@@ -28,7 +28,7 @@ Returns the current count of items that have been added to the `List` object.
 
 ### *void rewind()* ###
 
-Sets the state of the object to either turning-on or turning-off.
+Sets list to access first item upon next call to `next()`.
 
 ### *T& next()* ###
 
