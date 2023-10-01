@@ -1,12 +1,12 @@
 #######################################
-# Syntax Coloring Map For List
+# Syntax Coloring Map For SimpleList
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-ListItem  KEYWORD1
-List      KEYWORD1
+SimpleListItem  KEYWORD1
+SimpleList      KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)

@@ -1,8 +1,8 @@
-# List-library #
+# SimpleList-library #
 
 A (very) lightweight template class to support lists of objects.  NOT a drop-in replacement for the C++ STL (Standard Template Library) `list` class.
 
-The `List` class implements a *unidirectional linked list*, with a *head* position (address of the first object in the list), a *tail*  position (address of the last object in the list), and a current position between the head and tail positions inclusive.  This class lets the addresses of the objects be fetched in head-to-tail sequence.
+The `SimpleList` class implements a *unidirectional linked list*, with a *head* position (address of the first object in the list), a *tail*  position (address of the last object in the list), and a current position between the head and tail positions inclusive.  This class lets the addresses of the objects be fetched in head-to-tail sequence.
 
 This class uses an `add` method to populate the list, and `rewind`, `hasNext`,  and `next` methods for accessing the list contents.
 
@@ -15,9 +15,9 @@ This class uses an `add` method to populate the list, and `rewind`, `hasNext`,  
 
 On an Arduino processor, "dynamic" memory is not truly dynamic.  Memory can be allocated using the C++ `new` keyword, but `delete` does not free that memory.  This is especially an issue considering Arduino processors have a very limited amount of RAM available; the Uno has only 2K bytes and the Mega 2560 only 8K, for example.
 
-The expected usage of the `List` class is to create a linked list which is created once and then repeatedly read as the program loops.
+The expected usage of the `SimpleList` class is to create a linked list which is created once and then repeatedly read as the program loops.
 
 ### Example sketches ###
 
-- `ListExample` generates a linked list of the first 15 powers of 2 as `unsigned int` values, then repeatedly prints the list.
-- `ListStringExample` works like `ListExample` except it creates a list of [`String` objects](https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/) instead of `unsigned int` data.
+- `SimpleListExample` generates a linked list of the first 15 powers of 2 as `unsigned int` values, then repeatedly prints the list.
+- `SimpleListStringExample` works like `SimpleListExample` except it creates a list of [`String` objects](https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/) instead of `unsigned int` data.
