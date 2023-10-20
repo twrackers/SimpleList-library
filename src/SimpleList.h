@@ -74,6 +74,11 @@ public:
     m_curr = m_head;
   }
 
+  T& current()
+  {
+    return m_curr->getItem();
+  }
+
   T& next()
   {
     SimpleListItem* curr = m_curr;
