@@ -2,7 +2,7 @@
 
 #include <Streaming.h>
 
-// Define object to hold list of pointers to String objectss.
+// Define object to hold list of pointers to String objects.
 SimpleList<String*> stringSimpleList;
 
 unsigned long count = 0;
@@ -18,14 +18,14 @@ void setup() {
   // Start with zeroth power of 2 = 1.
   unsigned int pwr = 1;
   // Define separator String objects.
-  String sep1 = String("[");
-  String sep2 = String("] ");
+  String sep1 = String(" [");
+  String sep2 = String("]");
 
   // Test hasNext() method on empty list.
-  if (!stringSimpleList.hasNext()) {
-    Serial << "hasNext() PASS" << endl;
+  if (stringSimpleList.hasNext() == NULL) {
+    Serial << "empty list hasNext() PASS" << endl;
   } else {
-    Serial << "hasNext() FAIL" << endl;
+    Serial << "empty list hasNext() FAIL" << endl;
   }
   
   // Create Strings and add them to SimpleList.
@@ -38,12 +38,12 @@ void setup() {
     pwr *= 2;
   }
 
-  // Test contents of list.
+  // Test access to list using current() method.
   stringSimpleList.rewind();
   int index = 0;
   while (stringSimpleList.hasNext()) {
     Serial << _WIDTH(index++, 2) << ": " << *stringSimpleList.current() << endl;
-    stringSimpleList.next();
+    stringSimpleList.next();    // NOW skip to next item
   }
   
 }
@@ -51,19 +51,25 @@ void setup() {
 void loop() {
   
   // Increment line count.
-  Serial << ++count << ": ";
+  Serial << ++count << ":";
+  
   // Rewind to the beginning of the list.
   stringSimpleList.rewind();
+  
   // While there's a next entry in the list...
   while (stringSimpleList.hasNext()) {
+    
     // Fetch entry and print it.
     // This also steps to the next entry.
     Serial << *stringSimpleList.next();
+    
   }
+  
   // Done, write end of line.
   // Output will be series of numbered lines like:
   // [1] [2] [4] [8] [16] [32] [64] [128] [256] [512] [1024] [2048] [4096] [8192] [16384]
   Serial << endl;
+  
   delay(200);
   
 }
