@@ -1,7 +1,7 @@
 #ifndef _LIST__H_
 #define _LIST__H_
 
-template <class T>
+template<class T>
 class SimpleList
 {
   class SimpleListItem
